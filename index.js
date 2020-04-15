@@ -1,1 +1,23 @@
-console.log("안녕");
+const express = require('express');
+const app = express();
+
+const PORT = 4000;
+
+function handleListening(){
+    console.log(`Listening on: http://localhost:${PORT}`);
+}
+
+
+function handleHome(req, res){
+    res.send('dhdhdhdh');
+}
+function handleProfile(req, res){
+    res.send('hohohoho');
+}
+
+
+app.get("/", handleHome);
+app.get("/profile", handleProfile);
+
+
+app.listen(PORT, handleListening);
