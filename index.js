@@ -1,19 +1,18 @@
+import "core-js";
 const express = require('express');
 const app = express();
 
 const PORT = 4000;
 
-function handleListening(){
-    console.log(`Listening on: http://localhost:${PORT}`);
-}
+const handleListening = ()=> console.log(`Listening on: http://localhost:${PORT}`);
 
 
-function handleHome(req, res){
-    res.send('dhdhdhdh');
-}
-function handleProfile(req, res){
-    res.send('hohohoho');
-}
+const  handleHome = (req, res) => res.send('HELLO');
+
+// function handleProfile(req, res){
+//     res.send('hohohoho');
+// } 아래는 es6버전
+const handleProfile = (req, res) => res.send('hohohoho'); 
 
 
 app.get("/", handleHome);
